@@ -10,7 +10,7 @@ class AdminPanel(ui1, QMainWindow):
     def __init__(self):
         super().__init__()
         self.setupUi(self)
-        self.db = sqlite3.connect("data/coffee.sqlite").cursor()
+        self.db = sqlite3.connect("release/data/coffee.sqlite").cursor()
         self.pushButton.clicked.connect(self.update_window)
         self.pushButton_2.clicked.connect(self.update_viev_table)
         self.return_table()
